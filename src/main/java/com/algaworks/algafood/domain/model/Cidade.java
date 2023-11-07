@@ -8,9 +8,11 @@ public class Cidade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false)
     private String nome;
 
     @ManyToOne
+    @Column(nullable = false)
     private Estado estado;
 
     public Long getId() {
