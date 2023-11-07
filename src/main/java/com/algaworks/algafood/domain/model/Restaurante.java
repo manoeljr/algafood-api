@@ -14,7 +14,11 @@ public class Restaurante {
     private BigDecimal taxaFrete;
 
     @ManyToOne
+    @JoinColumn(name = "cozinha_id")
     private Cozinha cozinha;
+
+    @ManyToOne
+    private FormaPagamento formaPagamento;
 
     public Long getId() {
         return id;
@@ -46,6 +50,14 @@ public class Restaurante {
 
     public void setCozinha(Cozinha cozinha) {
         this.cozinha = cozinha;
+    }
+
+    public FormaPagamento getFormaPagamento() {
+        return formaPagamento;
+    }
+
+    public void setFormaPagamento(FormaPagamento formaPagamento) {
+        this.formaPagamento = formaPagamento;
     }
 
     @Override
