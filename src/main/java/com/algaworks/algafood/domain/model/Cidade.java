@@ -12,7 +12,6 @@ public class Cidade {
     private String nome;
 
     @ManyToOne
-    @Column(nullable = false)
     private Estado estado;
 
     public Long getId() {
